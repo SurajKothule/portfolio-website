@@ -673,3 +673,33 @@ li .profile_title {
         width: 100%;
     }
 }
+.certificates_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1rem; /* Adds spacing between certificate boxes */
+    padding: 1rem;
+}
+
+.certificate_box {
+    width: 45%; /* Adjust this for two per row on medium screens */
+    max-width: 300px;
+    padding: 1rem;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.certificate_image {
+    width: 100%; /* Make the image responsive */
+    height: auto;
+    max-height: 200px; /* Constrain height */
+    object-fit: cover; /* Ensures the image fills without distortion */
+}
+@media screen and (max-width: 768px) {
+    .certificate_box {
+        width: 100%; /* Stack certificates in a single column on small screens */
+    }
+}
